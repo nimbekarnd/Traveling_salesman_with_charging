@@ -9,7 +9,7 @@ In this problem, the maximum battery/charge capacity of the robot was 3 units wh
 #### Plan A:
 Based on the given information, we can say that from any point is 25% of the maximum charge. For a crude structure, our algorithm will start from home and look for the first point and decrement the distance from the current charge till it reaches the minimum charge point, and then go home. 
 
-<img src="./Outputs/path_A_100.png" width="400" height="400">  <img src="./Outputs/path_A_1000.png" width="400" height="400">
+<img src="./Outputs/path_A_100.png" width="400" height="400"> <img src="./Outputs/path_A_1000.png" width="400" height="400">
 
 The problem with this method was that points were randomly selected and so the battery consumption was not optimal at all. But this approach ensured that all points are completed with the downside of having to recharge more times
 
@@ -22,12 +22,12 @@ Keeping the charging situation the same, I sorted the points based on their dist
 #### Plan C - Minimum Spanning Tree (Dictionaries):
 Now the plan was to overcome the issue of randomness between the current point and the next point if the current point is not home. So I created a dictionary of sorted points from the center and mapped every point from them individually. So the flow would be fining the next closest point from whatever the current point is instead of randomizing it. The issue with this algorithm was the heavy data structure (i.e dict of dict} used. 
 
-<img src="./Outputs/plan_C_100.png" width="400" height="400">  <img src="./Outputs/plan_C_1000.png.png" width="400" height="400">
+<img src="./Outputs/plan_C_100.png" width="400" height="400">  <img src="./Outputs/plan_C_1000.png" width="400" height="400">
 
 #### Plan C-1 - Minimum Spanning Tree (Arrays):
 Try changing the heavy data structure and creating a 2D array based on distances between points and getting point information based on the number of columns/rows. And once the current point is accessed we can set it to max so while finding the closest point we don't visit the same point again. This plan improved the speed but took up back to the first issue of points being random. 
 
-<img src="./Outputs/plan_c1_100.png" width="400" height="400">  <img src="./Outputs/plan_C1_1000.png.png" width="400" height="400">
+<img src="./Outputs/plan_C1_100.png" width="400" height="400">  <img src="./Outputs/plan_C1_1000png" width="400" height="400">
 
 ### Implemented Approach - Minimum Spanning Tree (Dictionaries) in Batches:
 I implemented Plan C with multiple batched to avoid overloading my algorithm and hence speeding the process up. for N number of points, I create N/500 i.e 10 batches, or N/1000 i.e 5 batches. In my submission, I have assigned 10 batches. This gives me output fairly fast and in an optimal range. 
