@@ -27,7 +27,7 @@ Now the plan was to overcome the issue of randomness between the current point a
 #### Plan C-1 - Minimum Spanning Tree (Arrays):
 Try changing the heavy data structure and creating a 2D array based on distances between points and getting point information based on the number of columns/rows. And once the current point is accessed we can set it to max so while finding the closest point we don't visit the same point again. This plan improved the speed but took up back to the first issue of points being random. 
 
-<img src="./Outputs/plan_C1_100.png" width="400" height="400">  <img src="./Outputs/plan_C1_1000png" width="400" height="400">
+<img src="./Outputs/plan_C1_100.png" width="400" height="400">  <img src="./Outputs/plan_C1_1000.png" width="400" height="400">
 
 ### Implemented Approach - Minimum Spanning Tree (Dictionaries) in Batches:
 I implemented Plan C with multiple batched to avoid overloading my algorithm and hence speeding the process up. for N number of points, I create N/500 i.e 10 batches, or N/1000 i.e 5 batches. In my submission, I have assigned 10 batches. This gives me output fairly fast and in an optimal range. 
