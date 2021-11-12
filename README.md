@@ -1,13 +1,13 @@
-# Cobalt Traveling Robot Challenge
+# Traveling Robot Challenge with Charging
 
-The goal of the challenge was to cover all points between [0,1] while recharging when required.
+The goal of the challenge was to visit all points between [0,1] in the shortest path I could find while recharging when the battery runs out.
 
-In this problem, the maximum capacity of the robot was 3 units while covering 5000 points.
+In this problem, the maximum battery/charge capacity of the robot was 3 units while visiting 5000 points.
 
 ### Deconstruction of the problem statement and various approaches:
 
 #### Plan A:
-Based on the given information, we can say that from any point is 25% of the maximum charge. For a crude structure, our algorithm will start from home and look for the first point and decrement the distance from the current charge till it reaches the minimum charge point, and then go home. For 100 and 1000 points that algorithm will look like figures 'path_A_100.png' and 'path_A_1000.png' from the folder. 
+Based on the given information, we can say that from any point is 25% of the maximum charge. For a crude structure, our algorithm will start from home and look for the first point and decrement the distance from the current charge till it reaches the minimum charge point, and then go home. For 100 and 1000 points that algorithm will look like figures [path_A_100.png](./Outputs/path_A_100.png) and 'path_A_1000.png' from the folder. 
 
 The problem with this method was that points were randomly selected and so the battery consumption was not optimal at all. But this approach ensured that all points are completed with the downside of having to recharge more times
 
