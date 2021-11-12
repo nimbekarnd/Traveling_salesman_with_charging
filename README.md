@@ -9,9 +9,7 @@ In this problem, the maximum battery/charge capacity of the robot was 3 units wh
 #### Plan A:
 Based on the given information, we can say that from any point is 25% of the maximum charge. For a crude structure, our algorithm will start from home and look for the first point and decrement the distance from the current charge till it reaches the minimum charge point, and then go home. 
 
-![](https://github.com/nimbekarnd/Traveling_salesman_with_charging/blob/main/Outputs/path_A_100.png =100x100)
-
-![alt text](./Outputs/path_A_100.png?raw=true "Plan A for 100 points")  ![alt text](./Outputs/path_A_1000.png?raw=true "Plan A for 1000 points") 
+![image](./Outputs/path_A_100.png?raw=true "Plan A for 100 points" {width=20px height=20px})  ![alt text](./Outputs/path_A_1000.png?raw=true "Plan A for 1000 points") 
 
 The problem with this method was that points were randomly selected and so the battery consumption was not optimal at all. But this approach ensured that all points are completed with the downside of having to recharge more times
 
