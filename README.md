@@ -16,7 +16,7 @@ The problem with this method was that points were randomly selected and so the b
 #### Plan B:
 Keeping the charging situation the same, I sorted the points based on their distance from the charging station/home. This helped to select points closer charging station first and then move towards faraway points. But if the current point closer to origin was in the first quadrant, the next point may be selected in other quadrants. So the robot still had to cover more distance hence not improving the battery optimization that significantly. 
 
-<img src="./Outputs/Path_B_100.png" width="10" height="10">
+<img src="./Outputs/Path_B_100.png" width="100" height="100">
 
 ![alt text](./Outputs/Path_B_100.png?raw=true "Plan B for 100 points")  ![alt text](./Outputs/path_B_1000.png?raw=true "Plan B for 1000 points")
 
