@@ -16,9 +16,8 @@ The problem with this method was that points were randomly selected and so the b
 #### Plan B:
 Keeping the charging situation the same, I sorted the points based on their distance from the charging station/home. This helped to select points closer charging station first and then move towards faraway points. But if the current point closer to origin was in the first quadrant, the next point may be selected in other quadrants. So the robot still had to cover more distance hence not improving the battery optimization that significantly. 
 
-<img src="./Outputs/Path_B_100.png" width="250" height="250">
+<img src="./Outputs/Path_B_100.png" width="400" height="400">  <img src="./Outputs/path_B_1000.png" width="400" height="400">
 
-![alt text](./Outputs/Path_B_100.png?raw=true "Plan B for 100 points")  ![alt text](./Outputs/path_B_1000.png?raw=true "Plan B for 1000 points")
 
 #### Plan C - Minimum Spanning Tree (Dictionaries):
 Now the plan was to overcome the issue of randomness between the current point and the next point if the current point is not home. So I created a dictionary of sorted points from the center and mapped every point from them individually. So the flow would be fining the next closest point from whatever the current point is instead of randomizing it. The issue with this algorithm was the heavy data structure (i.e dict of dict} used. 
