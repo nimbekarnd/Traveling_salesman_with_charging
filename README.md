@@ -39,9 +39,6 @@ I implemented Plan C with multiple batched to avoid overloading my algorithm and
 ## Instruction
 
 ```python
-# make sure you are in the correct directory
-```
-```
 $ python Multi_Batch_Minimum_Spanning_Tree.py
 ```
 
